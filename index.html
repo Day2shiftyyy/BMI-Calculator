@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calc">
+        <span id="title"></span>
+        <h1>LEMICKEYY BMI CALCULATOR</h1>
+        <input id="height" type="number" placeholder="Height in cm">
+        <input id="weight" type="number" placeholder="Weight in kg">
+        <button onclick="calculation()">Calculate</button>
+        <span id="result">Your results will be shown here...</span>
+    </div>
+    <script src="../eel.js"></script>
+    <script>
+        textres = document.getElementById("result");
+        height = document.getElementById("height");
+        weight = document.getElementById("weight")
+
+        function calculation() {
+            eel.bmi_calc(height.value, weight.value)(result);
+        }
+
+        function result(result) {
+            textres.innerHTML = result
+        }
+
+    </script>
+</body>
+</html>
